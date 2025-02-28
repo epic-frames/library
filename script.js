@@ -1,3 +1,5 @@
+const version = "webv1.0.2"
+
 const news = [
     {
         id: 3,
@@ -162,13 +164,11 @@ function renderGames() {
 function renderVersions(gameName) {
     const versionsContainer = document.getElementById('versionsContainer');
 
-    // Check if the game exists in the versions object
     if (!versions[gameName] || versions[gameName].length === 0) {
         versionsContainer.innerHTML = "<p>No versions available for this game.</p>";
         return;
     }
 
-    // Render versions for the specified game
     versionsContainer.innerHTML = versions[gameName].map(version => `
         <div class="version-card">
             <h3>Version ${version.name}</h3>
@@ -184,6 +184,14 @@ function renderVersions(gameName) {
     `).join('');
 }
 
+function renderFooter() {
+    const footer = document.getElementById('footer');
+    footer.innerHTML = `
+        <p>2025 Epic Frame Studio</p>
+        <p style="font-size: 0.9rem;">Running ${version}</p>
+        `
+}
+
 
 function downloadVersion(game, version) {
     a = `Versions/${game}/${game}_v${version}.zip`
@@ -194,3 +202,4 @@ function downloadVersion(game, version) {
 // Initial render
 renderNews();
 renderGames();
+renderFooter();
