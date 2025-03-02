@@ -1,25 +1,25 @@
-const version = "webv1.0.2"
+const version = "webv1.0.3"
 
 const news = [
     {
         id: 3,
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "February 20, 2025",
-        content: '"Cave Of Malice" is finnaly open for world-wide beta testing, available on our website untill v1.0.0. This is a beta-version which means that it might contain some bugs. If you stumble upon any bugs, please report to the email <i>epicframe.email@gmail.com</i>.',
+        content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
     },
     {
         id: 2,
         title: "New Game Release",
         date: "February 15, 2025 (leaving soon)",
-        content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as the time goes by. Note: The photo above is only our inspiration.',
+        content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
         image: "Assets/photo-2.jpg"
     },
     {
         id: 1,
         title: 'Development of "Asteroid Avoider 3000"',
         date: "January 17, 2025",
-        content: "With the latest update (v1.3) we are stopping further development of this game, but something interesting is coming soon.",
+        content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
         image: "Assets/photo-1.png"
     }
 ];
@@ -71,7 +71,7 @@ const versions = {
                             - Added game music for the start menu <br>
                             - Added game optimizations <br>
                             - Enhanced the debugging mode (You can now enter debug mode by pressing 1) <br>
-                            - Made sloweroid bigger in order to provide more challenge <br>
+                            - Made sloweroid bigger to provide more challenge <br>
                             - Adjusted the sloweroid falling speed`,
             date: "9 January, 2025",
             size: "7.1MB"
@@ -99,7 +99,7 @@ const versions = {
         {
             id: 1,
             name: "0.1.0",
-            description: "Initial launch in open beta testing. Note: This version will be removed after v1.0.0",
+            description: "Initial launch in open beta testing. Note: This version will be discontinued after v1.0.0",
             date: "20 February, 2025",
             size: "71KB"
         }
