@@ -1,28 +1,75 @@
-const version = "webv1.0.3"
+const version = "webv1.0.4"
 
-const news = [
+const main_news = [
     {
         id: 3,
         title: 'Open Beta-testing for "Cave Of Mailce"',
-        date: "February 20, 2025",
+        date: "20 February, 2025",
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
     },
     {
         id: 2,
         title: "New Game Release",
-        date: "February 15, 2025 (leaving soon)",
+        date: "15 February, 2025 (leaving soon)",
         content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
         image: "Assets/photo-2.jpg"
     },
     {
         id: 1,
         title: 'Development of "Asteroid Avoider 3000"',
-        date: "January 17, 2025",
+        date: "17 January, 2025",
         content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
         image: "Assets/photo-1.png"
     }
 ];
+
+const news = [
+    {
+        id: 3,
+        show: true,
+        tags: "News",
+        title: 'Open Beta-testing for "Cave Of Mailce"',
+        date: "20 February, 2025",
+        content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
+        image: "Assets/COM.png"
+    },
+    {
+        id: 2,
+        show: true,
+        tags: "News",
+        title: "New Game Release",
+        date: "15 February, 2025",
+        content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
+        image: "Assets/photo-2.jpg"
+    },
+    {
+        id: 1,
+        show: true,
+        tags: "News",
+        title: 'Development of "Asteroid Avoider 3000"',
+        date: "17 January, 2025",
+        content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
+        image: "Assets/photo-1.png"
+    }
+];
+
+
+const sp = [
+    {
+        id: 1,
+        show: false,
+        content: `
+        <div class="sp-content">
+            <h3 class="text-xl font-semibold">A new creature!</h3>
+            <p class="sp-date">11 March, 2025</p>
+            <p class="sp-text">A new creature has appeared from the caves! Can you guess it's abilities?</p>
+            <img src="Assets/photo-2.jpg" alt="A new creature!" class="sp-image">
+        </div>
+        `
+    }
+];
+
 
 const games = [
     {
@@ -106,10 +153,10 @@ const versions = {
     ]
 }
 
-function renderNews() {
+function renderMainNews() {
     try {
         const newsContainer = document.getElementById('newsContainer');
-        newsContainer.innerHTML = news.map(item => `
+        newsContainer.innerHTML = main_news.map(item => `
             <div class="news-card">
                 <img src="${item.image}" alt="${item.title}" class="news-image">
                 <div class="news-content">
@@ -119,6 +166,44 @@ function renderNews() {
                 </div>
             </div>
         `).join('');
+    } catch (TypeError) {}
+}
+
+
+function renderNews() {
+    try {
+        const newsContainer = document.getElementById('newsContainer');
+        newsContainer.innerHTML = news.filter(item => item.show === true).map(item => `
+            <div class="news-card">
+                <img src="${item.image}" alt="${item.title}" class="news-image">
+                <div class="news-content">
+                    <h3 class="text-xl font-semibold">${item.title}</h3>
+                    <p style="color: #9ca3af; font-size: 0.875rem;">Tags: ${item.tags}</p>
+                    <p class="news-date">${item.date}</p>
+                    <p>${item.content}</p>
+                </div>
+            </div>
+        `).join('')
+    } catch (TypeError) {}
+}
+
+
+function renderSneakPeeks() {
+    try {
+        const spSection = document.getElementById('sneakPeekSection');
+        spSection.outerHTML = `
+        <section class="section" id="sneakPeekSection">
+            <h2 class="section-header"><span class="icon">👀</span> Sneak Peeks</h2>
+            <div id="sneakPeekContainer" class="news-grid"></div>
+        </section>
+            `
+        const spContainer = document.getElementById('sneakPeekContainer');
+        console.log(spContainer, spSection)
+        spContainer.innerHTML = sp.filter(sp => sp.show === true).map(sp => `
+            <div class="news-card">
+                ${sp.content}
+            </div>
+        `).join('')
     } catch (TypeError) {}
 }
 
@@ -161,6 +246,7 @@ function renderGames() {
     } catch (TypeError) {}
 }
 
+
 function renderVersions(gameName) {
     const versionsContainer = document.getElementById('versionsContainer');
 
@@ -200,6 +286,4 @@ function downloadVersion(game, version) {
 }
 
 // Initial render
-renderNews();
-renderGames();
 renderFooter();

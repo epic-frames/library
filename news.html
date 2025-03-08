@@ -19,7 +19,7 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="#gamesSection">Games</a></li>
+                    <li><a href="index.html#gamesSection">Games</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,21 +32,9 @@
             <section class="section" id="sneakPeekSection" style="margin: 0;"></section>
 
             <section class="section" id="newsSection">
-                <h2 class="section-header"><span class="icon">📰</span> Latest News</h2>
+                <h2 class="section-header"><span class="icon">📰</span> News</h2>
                 <div id="newsContainer" class="news-grid"></div>
             </section>
-
-            <section class="section" id="gamesSection">
-                <h2 class="section-header"><span class="icon">🎮</span> Our Games</h2>
-                <div id="gamesContainer"></div>
-            </section>
-
-
-            <!-- <section class="section" id="aboutSection">
-                <h2 class="section-header"><span class="icon">ℹ️</span> About Us</h2>
-
-            </section> -->
-
         </div>
     </main>
 
@@ -66,8 +54,11 @@
     <script src="script.js"></script>
     <script src="countdown.js"></script>
     <script>
-        renderMainNews();
-        renderGames();
+        console.log(sp.length)
+        if (sp.length > 0 & sp.some(item => item.show)) {
+            renderSneakPeeks();
+        }
+        renderNews();
     </script>
 </body>
 </html>

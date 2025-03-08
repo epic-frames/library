@@ -1,0 +1,26 @@
+h1#title, .countdown-container {
+    color: #ff5555;
+    text-align: center;
+    padding: 50px, 50px, 50px, 0px;
+}
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countdown-frame {
+    background-color: #61dafb;
+    padding: 0px 15px 0px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 4em;
+}
+.colon {
+    font-size: 4em;
+    margin: 0 10px;
+    margin-bottom: 50px;
+}
+.countdown-label {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
