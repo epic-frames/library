@@ -1,4 +1,4 @@
-const version = "webv1.0.4"
+const version = "webv1.0.41"
 
 const main_news = [
     {

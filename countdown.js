@@ -25,7 +25,7 @@ function createCountdown(elementId, dates) {
         `;
     }
 
-    setInterval(updateCountdown, 10000);
+    setInterval(updateCountdown, 100);
     updateCountdown();
 }
 
