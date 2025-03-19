@@ -54,11 +54,14 @@
     <script src="script.js"></script>
     <script src="countdown.js"></script>
     <script>
-        console.log(sp.length)
-        if (sp.length > 0 & sp.some(item => item.show)) {
-            renderSneakPeeks();
-        }
+        const currentYear = new Date().getFullYear();
+
+        createCountdown("countdown", [
+            new Date(`March 20, ${currentYear} 16:00:00`).getTime()
+        ]);
+        
         renderNews();
+        setInterval(render, 1000)
     </script>
 </body>
 </html>

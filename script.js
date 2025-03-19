@@ -1,8 +1,10 @@
-const version = "webv1.0.41"
+const version = "webv1.0.42"
 
 const main_news = [
     {
         id: 3,
+        // release: "1 January, 2025 00:00:00",
+        release: "10 March, 2025 19:12:30",
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "20 February, 2025",
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
@@ -10,6 +12,7 @@ const main_news = [
     },
     {
         id: 2,
+        release: "1 January, 2025 00:00:00",
         title: "New Game Release",
         date: "15 February, 2025 (leaving soon)",
         content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
@@ -17,6 +20,7 @@ const main_news = [
     },
     {
         id: 1,
+        release: "1 January, 2025 00:00:00",
         title: 'Development of "Asteroid Avoider 3000"',
         date: "17 January, 2025",
         content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
@@ -28,6 +32,7 @@ const news = [
     {
         id: 3,
         show: true,
+        release: "1 January, 2025 00:00:00",
         tags: "News",
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "20 February, 2025",
@@ -37,6 +42,7 @@ const news = [
     {
         id: 2,
         show: true,
+        release: "1 January, 2025 00:00:00",
         tags: "News",
         title: "New Game Release",
         date: "15 February, 2025",
@@ -46,6 +52,7 @@ const news = [
     {
         id: 1,
         show: true,
+        release: "1 January, 2025 00:00:00",
         tags: "News",
         title: 'Development of "Asteroid Avoider 3000"',
         date: "17 January, 2025",
@@ -58,13 +65,14 @@ const news = [
 const sp = [
     {
         id: 1,
-        show: false,
+        show: true,
+        release: "19 March, 2025 22:30:00",
         content: `
         <div class="sp-content">
             <h3 class="text-xl font-semibold">A new creature!</h3>
-            <p class="sp-date">11 March, 2025</p>
+            <p class="sp-date">19 March, 2025</p>
             <p class="sp-text">A new creature has appeared from the caves! Can you guess it's abilities?</p>
-            <img src="Assets/photo-2.jpg" alt="A new creature!" class="sp-image">
+            <img src="Assets/sneak-peak-silhuette.png" alt="A new creature!" class="sp-image">
         </div>
         `
     }
@@ -153,10 +161,45 @@ const versions = {
     ]
 }
 
+function createCountdown(elementId, dates) {
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const nextDate = dates.find(date => date > now);
+
+        if (!nextDate) {
+            document.getElementById(elementId).innerHTML = "Update has dropped!";
+            return;
+        }
+
+        const distance = nextDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(elementId).innerHTML = `
+            <div><div class="countdown-frame">${formatTime(days)}</div><div class="countdown-label">Days</div></div>
+            <span class="colon">:</span>
+            <div><div class="countdown-frame">${formatTime(hours)}</div><div class="countdown-label">Hours</div></div>
+            <span class="colon">:</span>
+            <div><div class="countdown-frame">${formatTime(minutes)}</div><div class="countdown-label">Minutes</div></div>
+            <span class="colon">:</span>
+            <div><div class="countdown-frame">${formatTime(seconds)}</div><div class="countdown-label">Seconds</div></div>
+        `;
+    }
+
+    setInterval(updateCountdown, 1000);
+}
+
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+
 function renderMainNews() {
     try {
         const newsContainer = document.getElementById('newsContainer');
-        newsContainer.innerHTML = main_news.map(item => `
+        newsContainer.innerHTML = main_news.filter(item => new Date(item.release).getTime() <= new Date().getTime()).map(item => `
             <div class="news-card">
                 <img src="${item.image}" alt="${item.title}" class="news-image">
                 <div class="news-content">
@@ -173,7 +216,7 @@ function renderMainNews() {
 function renderNews() {
     try {
         const newsContainer = document.getElementById('newsContainer');
-        newsContainer.innerHTML = news.filter(item => item.show === true).map(item => `
+        newsContainer.innerHTML = news.filter(item => item.show === true && new Date(item.release).getTime() <= new Date().getTime()).map(item => `
             <div class="news-card">
                 <img src="${item.image}" alt="${item.title}" class="news-image">
                 <div class="news-content">
@@ -198,8 +241,7 @@ function renderSneakPeeks() {
         </section>
             `
         const spContainer = document.getElementById('sneakPeekContainer');
-        console.log(spContainer, spSection)
-        spContainer.innerHTML = sp.filter(sp => sp.show === true).map(sp => `
+        spContainer.innerHTML = sp.filter(sp => sp.show === true && new Date(sp.release).getTime() <= new Date().getTime()).map(sp => `
             <div class="news-card">
                 ${sp.content}
             </div>
@@ -283,6 +325,18 @@ function downloadVersion(game, version) {
     a = `Versions/${game}/${game}_v${version}.zip`
     window.location.href = a
     alert(`Downloading version ${version}...`);
+}
+
+function render(){
+    if (sp.length > 0 & sp.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
+        renderSneakPeeks();
+    }
+    // if (news.length > 0 & news.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
+    //     renderNews();
+    // }
+    // if (main_news.length > 0 & main_news.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
+    //     renderMainNews();
+    // }
 }
 
 // Initial render
