@@ -2,6 +2,14 @@ const version = "webv1.0.42"
 
 const main_news = [
     {
+        id: 4,
+        release: "20 March, 2025 16:00:00",
+        title: 'New version for "Cave of Malice"',
+        date: "20 February, 2025",
+        content: 'A new versions has come with 2 new levels and a new cave creature',
+        image: "Assets/COM.png"
+    },
+    {
         id: 3,
         // release: "1 January, 2025 00:00:00",
         release: "10 March, 2025 19:12:30",
@@ -9,14 +17,6 @@ const main_news = [
         date: "20 February, 2025",
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
-    },
-    {
-        id: 2,
-        release: "1 January, 2025 00:00:00",
-        title: "New Game Release",
-        date: "15 February, 2025 (leaving soon)",
-        content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
-        image: "Assets/photo-2.jpg"
     },
     {
         id: 1,
@@ -29,6 +29,14 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 4,
+        release: "20 March, 2025 16:00:00",
+        title: 'New version for "Cave of Malice"',
+        date: "20 February, 2025",
+        content: 'A new versions has come with 2 new levels and a new cave creature',
+        image: "Assets/COM.png"
+    },
     {
         id: 3,
         show: true,
@@ -65,7 +73,7 @@ const news = [
 const sp = [
     {
         id: 1,
-        show: true,
+        show: false,
         release: "19 March, 2025 22:30:00",
         content: `
         <div class="sp-content">
@@ -87,6 +95,7 @@ const games = [
         description: "A platformer set in a cave with cave creatures.",
         image: "Assets/COM.png",
         versions: [
+            { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
             { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)" }
         ]
     },
@@ -151,6 +160,13 @@ const versions = {
         }
     ],
     "Cave_Of_Malice": [
+        {
+            id: 2,
+            name: "0.2.0",
+            description: "In this update, we added 2 new levels (level 2 and level 3), a new enemy (The Watcher) and minor bug fixes",
+            date: "20 March, 2025",
+            size: "15.4MB"
+        },
         {
             id: 1,
             name: "0.1.0",
