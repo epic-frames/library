@@ -1,4 +1,4 @@
-const version = "webv1.0.521"
+const version = "webv1.0.522"
 
 const main_news = [
     {
@@ -40,6 +40,7 @@ const news = [
         id: 5,
         show: true,
         release: "21 March, 2025 10:00:00",
+        tags: "Emergency Update",
         title: 'Emergency update for "Cave of Malice"',
         date: "21 March, 2025",
         content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
@@ -49,6 +50,7 @@ const news = [
         id: 4,
         show: true,
         release: "20 March, 2025 16:00:00",
+        tags: "News",
         title: 'New version for "Cave of Malice"',
         date: "20 March, 2025",
         content: 'A new versions has come with 2 new levels and a new cave creature',
