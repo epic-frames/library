@@ -1,17 +1,24 @@
-const version = "webv1.0.51"
+const version = "webv1.0.52"
 
 const main_news = [
+    {
+        id: 5,
+        release: "21 March, 2025 10:00:00",
+        title: 'Emergency update for "Cave of Malice"',
+        date: "20 February, 2025",
+        content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
+        image: "Assets/freeze_bg.png"
+    },
     {
         id: 4,
         release: "20 March, 2025 16:00:00",
         title: 'New version for "Cave of Malice"',
-        date: "20 February, 2025",
+        date: "20 March, 2025",
         content: 'A new versions has come with 2 new levels and a new cave creature',
         image: "Assets/COM.png"
     },
     {
         id: 3,
-        // release: "1 January, 2025 00:00:00",
         release: "10 March, 2025 19:12:30",
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "20 February, 2025",
@@ -30,10 +37,20 @@ const main_news = [
 
 const news = [
     {
+        id: 5,
+        show: true,
+        release: "21 March, 2025 10:00:00",
+        title: 'Emergency update for "Cave of Malice"',
+        date: "21 March, 2025",
+        content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
+        image: "Assets/freeze_bg.png"
+    },
+    {
         id: 4,
+        show: true,
         release: "20 March, 2025 16:00:00",
         title: 'New version for "Cave of Malice"',
-        date: "20 February, 2025",
+        date: "20 March, 2025",
         content: 'A new versions has come with 2 new levels and a new cave creature',
         image: "Assets/COM.png"
     },
@@ -95,6 +112,7 @@ const games = [
         description: "A platformer set in a cave with cave creatures.",
         image: "Assets/COM.png",
         versions: [
+            { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
             { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
             { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)" }
         ]
@@ -160,6 +178,13 @@ const versions = {
         }
     ],
     "Cave_Of_Malice": [
+        {
+            id: 3,
+            name: "0.2.1",
+            description: "This is a emergency update with some new feature based on the version 0.2.0. Note: the source code for v0.2.0 will be relpced shortly.",
+            date: "21 March, 2025",
+            size: "30.8MB"
+        },
         {
             id: 2,
             name: "0.2.0",
