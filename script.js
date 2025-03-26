@@ -1,4 +1,4 @@
-const version = "webv1.0.522"
+const version = "webv1.0.523"
 
 const main_news = [
     {
@@ -183,7 +183,7 @@ const versions = {
         {
             id: 3,
             name: "0.2.1",
-            description: "This is a emergency update with some new feature based on the version 0.2.0. Note: the source code for v0.2.0 will be relpced shortly.",
+            description: "This is a emergency update with some new feature based on the version 0.2.0. Note: The source code for v0.2.0 will be relpced shortly.",
             date: "21 March, 2025",
             size: "30.8MB"
         },
