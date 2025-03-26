@@ -1,11 +1,11 @@
-const version = "webv1.0.52"
+const version = "webv1.0.521"
 
 const main_news = [
     {
         id: 5,
-        release: "21 March, 2025 10:00:00",
+        release: "26 March, 2025 10:00:00",
         title: 'Emergency update for "Cave of Malice"',
-        date: "20 February, 2025",
+        date: "26 March, 2025",
         content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
         image: "Assets/freeze_bg.png"
     },
