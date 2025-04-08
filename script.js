@@ -1,6 +1,14 @@
-const version = "webv1.0.523"
+const version = "webv1.0.6"
 
 const main_news = [
+    {
+        id: 6,
+        release: "11 April, 2025 16:00:00",
+        title: 'New Version of "Cave of Malice" (still in beta-development)',
+        date: "8 April, 2025",
+        content: 'Wait and see',
+        image: "Assets/COM.png"
+    },
     {
         id: 5,
         release: "26 March, 2025 10:00:00",
@@ -8,14 +16,6 @@ const main_news = [
         date: "26 March, 2025",
         content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
         image: "Assets/freeze_bg.png"
-    },
-    {
-        id: 4,
-        release: "20 March, 2025 16:00:00",
-        title: 'New version for "Cave of Malice"',
-        date: "20 March, 2025",
-        content: 'A new versions has come with 2 new levels and a new cave creature',
-        image: "Assets/COM.png"
     },
     {
         id: 3,
@@ -36,6 +36,16 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 6,
+        show: true,
+        release: "11 April, 2025 16:00:00",
+        tags: "New Update",
+        title: 'New Version of "Cave of Malice" (still in beta-development)',
+        date: "8 April, 2025",
+        content: 'Wait and see',
+        image: "Assets/COM.png"
+    },
     {
         id: 5,
         show: true,
@@ -92,14 +102,14 @@ const news = [
 const sp = [
     {
         id: 1,
-        show: false,
-        release: "19 March, 2025 22:30:00",
+        show: true,
+        release: "8 April, 2025 17:00:00",
         content: `
         <div class="sp-content">
-            <h3 class="text-xl font-semibold">A new creature!</h3>
-            <p class="sp-date">19 March, 2025</p>
-            <p class="sp-text">A new creature has appeared from the caves! Can you guess it's abilities?</p>
-            <img src="Assets/sneak-peak-silhuette.png" alt="A new creature!" class="sp-image">
+            <h3 class="text-xl font-semibold">Something big is coming!</h3>
+            <p class="sp-date">8 April, 2025</p>
+            <p class="sp-text">A ability will be added in the next update that might change your entire playstyle!</p>
+            <img src="Assets/sneak_peak.png" alt="A new creature!" class="sp-image">
         </div>
         `
     }
