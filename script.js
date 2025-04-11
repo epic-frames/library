@@ -5,8 +5,8 @@ const main_news = [
         id: 6,
         release: "11 April, 2025 16:00:00",
         title: 'New Version of "Cave of Malice" (still in beta-development)',
-        date: "8 April, 2025",
-        content: 'Wait and see',
+        date: "11 April, 2025",
+        content: 'A new version of "Cave of Malice" has just dropped with coins and a shop. Check out the game versions for more detail',
         image: "Assets/COM.png"
     },
     {
@@ -42,8 +42,8 @@ const news = [
         release: "11 April, 2025 16:00:00",
         tags: "New Update",
         title: 'New Version of "Cave of Malice" (still in beta-development)',
-        date: "8 April, 2025",
-        content: 'Wait and see',
+        date: "11 April, 2025",
+        content: 'A new version of "Cave of Malice" has just dropped with coins and a shop. Check out the game versions for more detail',
         image: "Assets/COM.png"
     },
     {
@@ -124,6 +124,7 @@ const games = [
         description: "A platformer set in a cave with cave creatures.",
         image: "Assets/COM.png",
         versions: [
+            { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
             { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
             { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
             { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)" }
@@ -190,6 +191,13 @@ const versions = {
         }
     ],
     "Cave_Of_Malice": [
+        {
+            id: 4,
+            name: "0.3.0",
+            description: "The April Drop has just been released where you can access our brand new menu with upgrades you can buy for the new coins which have also been added in this recent update. Coins are found on all the levels (usually 3 - 4 coins per level). You can use these coins to upgrade your player's stats. Note: The coin economy is still in development and a lot of things are subject to change.",
+            date: "11 April, 2025",
+            size: "61.7MB"
+        },
         {
             id: 3,
             name: "0.2.1",
