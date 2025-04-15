@@ -1,4 +1,4 @@
-const version = "webv1.0.6"
+const version = "webv1.0.72"
 
 const main_news = [
     {
@@ -10,18 +10,10 @@ const main_news = [
         image: "Assets/COM.png"
     },
     {
-        id: 5,
-        release: "26 March, 2025 10:00:00",
-        title: 'Emergency update for "Cave of Malice"',
-        date: "26 March, 2025",
-        content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
-        image: "Assets/freeze_bg.png"
-    },
-    {
         id: 3,
         release: "10 March, 2025 19:12:30",
         title: 'Open Beta-testing for "Cave Of Mailce"',
-        date: "20 February, 2025",
+        date: "20 February, 2025",1
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
     },
@@ -102,7 +94,7 @@ const news = [
 const sp = [
     {
         id: 1,
-        show: true,
+        show: false,
         release: "8 April, 2025 17:00:00",
         content: `
         <div class="sp-content">
@@ -126,7 +118,7 @@ const games = [
         versions: [
             { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
             { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
-            { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
+            // { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
             { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)" }
         ]
     },
@@ -201,21 +193,21 @@ const versions = {
         {
             id: 3,
             name: "0.2.1",
-            description: "This is a emergency update with some new feature based on the version 0.2.0. Note: The source code for v0.2.0 will be relpced shortly.",
+            description: "This is a emergency update with some new feature based on the version 0.2.0.",
             date: "21 March, 2025",
             size: "30.8MB"
         },
         {
             id: 2,
             name: "0.2.0",
-            description: "In this update, we added 2 new levels (level 2 and level 3), a new enemy (The Watcher) and minor bug fixes",
+            description: "In this update, we added 2 new levels (level 2 and level 3), a new enemy (The Watcher) and minor bug fixes.",
             date: "20 March, 2025",
             size: "15.4MB"
         },
         {
             id: 1,
             name: "0.1.0",
-            description: "Initial launch in open beta testing. Note: This version will be discontinued after v1.0.0",
+            description: "Initial launch in open beta testing. Note: This version will be discontinued after v1.0.0.",
             date: "20 February, 2025",
             size: "71KB"
         }
