@@ -1,4 +1,4 @@
-const version = "webv1.0.72"
+const version = "webv1.0.73"
 
 const main_news = [
     {
@@ -13,7 +13,7 @@ const main_news = [
         id: 3,
         release: "10 March, 2025 19:12:30",
         title: 'Open Beta-testing for "Cave Of Mailce"',
-        date: "20 February, 2025",1
+        date: "20 February, 2025",
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
     },

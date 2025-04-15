@@ -44,17 +44,17 @@ function formatTime(time) {
 
 // }
 
-function wait(releaseTime) {
-    var interval = setInterval(() => {
-        var now = new Date().getTime();
-        const distance = releaseTime - now;
+// function wait(releaseTime) {
+//     var interval = setInterval(() => {
+//         var now = new Date().getTime();
+//         const distance = releaseTime - now;
 
-        if (distance <= 0) {
-            clearInterval(interval);
-        }
-    }, 1000);
-}
+//         if (distance <= 0) {
+//             clearInterval(interval);
+//         }
+//     }, 1000);
+// }
 
-// Example usage: Wait until a specific date and time
+// // Example usage: Wait until a specific date and time
 // let targetDate = new Date("March 10, 2025 15:30:00").getTime();
 // wait(targetDate);
