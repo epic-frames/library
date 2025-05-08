@@ -1,6 +1,14 @@
-const version = "webv1.0.73"
+const version = "webv1.0.8"
 
 const main_news = [
+    {
+        id: 7,
+        release: "8 May, 2025 16:00:00",
+        title: 'Upcoming Update Detailed Brakedown',
+        date: "8 May, 2025",
+        content: 'This is the deatiled bakedown of the update coming this friday with deatiled explanations for each of the features added. The article is accessible <a style="color: gray;" href="https://drive.google.com/file/d/1DM0ftl7v5doEDUSu36giyuZLDLcQtYTK/view?usp=sharing">here</a>.',
+        image: "Assets/health_sneak_peak.png"
+    },
     {
         id: 6,
         release: "11 April, 2025 16:00:00",
@@ -28,6 +36,16 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 7,
+        show: true,
+        release: "8 May, 2025 16:00:00",
+        tags: "New Update Brakedown",
+        title: 'Upcoming Update Detailed Brakedown',
+        date: "8 May, 2025",
+        content: 'This is the deatiled bakedown of the update coming this friday with deatiled explanations for each of the features added. The article is accessible <a style="color: gray;" href="https://drive.google.com/file/d/1DM0ftl7v5doEDUSu36giyuZLDLcQtYTK/view?usp=sharing">here</a>.',
+        image: "Assets/health_sneak_peak.png"
+    },
     {
         id: 6,
         show: true,
@@ -102,6 +120,19 @@ const sp = [
             <p class="sp-date">8 April, 2025</p>
             <p class="sp-text">A ability will be added in the next update that might change your entire playstyle!</p>
             <img src="Assets/sneak_peak.png" alt="A new creature!" class="sp-image">
+        </div>
+        `
+    },
+    {
+        id: 2,
+        show: false,
+        release: "7 May, 2025 17:00:00",
+        content: `
+        <div class="sp-content">
+            <h3 class="text-xl font-semibold">The second update for the shop is here this Friday!</h3>
+            <p class="sp-date">7 May, 2025</p>
+            <p class="sp-text">In this update we redesigned the shop to help improve the playing experience</p>
+            <img src="Assets/health_sneak_peak.png" alt="New Health System" class="sp-image">
         </div>
         `
     }
