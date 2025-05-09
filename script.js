@@ -1,4 +1,4 @@
-const version = "webv1.0.8"
+const version = "webv1.0.71"
 
 const main_news = [
     {
@@ -145,12 +145,12 @@ const games = [
         title: "Cave of Malice",
         dtitle: "cave_of_malice",
         description: "A platformer set in a cave with cave creatures.",
-        image: "Assets/COM.png",
+        image: "Assets/COM-N.png",
         versions: [
+            // { version: "v0.4.0", date: "9 May, 2025", notes: "Completed the shop with a new wheel to spin and more upgrades"},
             { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
             { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
-            // { version: "v0.2.0", date: "20 March, 2025", notes: "Added 2 new levels and a new enemy" },
-            { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)" }
+            // { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)"}
         ]
     },
     {
@@ -160,8 +160,8 @@ const games = [
         description: "A game where you have to avoid asteroids.",
         image: "Assets/AA3000.png",
         versions: [
-            { version: "v1.3.0", date: "17 January, 2025", notes: "Added a new settings page" },
-            { version: "v1.2.0", date: "9 January, 2025", notes: "New sprite and music" }
+            { version: "v1.3.0", date: "17 January, 2025", notes: "Added a new settings page"},
+            { version: "v1.2.0", date: "9 January, 2025", notes: "New sprite and music"}
         ]
     }
 ];
@@ -214,6 +214,13 @@ const versions = {
         }
     ],
     "Cave_Of_Malice": [
+        // {
+        //     id: 5,
+        //     name: "0.4.0",
+        //     description: "The May Drop comes with changes to the games economy and the shop. The last update before v1.0.0",
+        //     date: "9 May, 2025",
+        //     size: "61.7MB"
+        // },
         {
             id: 4,
             name: "0.3.0",
