@@ -1,6 +1,14 @@
-const version = "webv1.0.832"
+const version = "webv1.0.9"
 
 const main_news = [
+    {
+        id: 8,
+        release: "28 August, 2025 9:00:00",
+        title: 'New Year for Cave of Malice',
+        date: "28 August, 2025",
+        content: 'After a long summer break, "Cave Of Malice" is back in development but some things have changed for "Cave Of Malice" during the summer. Cave Of Malice will not be releasing a global version of the game (v1.0.0) this year (2025) but will continue with updates 0.6.0 and 0.7.0. We are also planning to release 2-3 updates spanning from September 2025 - June 2026. The upcoming next update (v0.6.0 (Winter Drop) is planned to release end of November/start of December. More information will be posted as time goes by.',
+        image: "Assets/logo-1.png"
+    },
     {
         id: 7,
         release: "8 May, 2025 16:00:00",
@@ -10,19 +18,11 @@ const main_news = [
         image: "Assets/health_sneak_peak.png"
     },
     {
-        id: 6,
-        release: "11 April, 2025 16:00:00",
-        title: 'New Version of "Cave of Malice" (still in beta-development)',
-        date: "11 April, 2025",
-        content: 'A new version of "Cave of Malice" has just dropped with coins and a shop. Check out the game versions for more detail',
-        image: "Assets/COM.png"
-    },
-    {
         id: 3,
         release: "10 March, 2025 19:12:30",
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "20 February, 2025",
-        content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
+        content: '"Cave of Malice" is now available for worldwide beta testing on our website. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
         image: "Assets/COM.png"
     },
     {
@@ -36,6 +36,16 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 8,
+        show: true,
+        release: "28 August, 2025 9:00:00",
+        tags: "News",
+        title: 'New Year for Cave of Malice',
+        date: "28 August, 2025",
+        content: 'After a long summer break, "Cave Of Malice" is back in development but some things have changed for "Cave Of Malice" during the summer. Cave Of Malice will not be releasing a global version of the game (v1.0.0) this year (2025) but will continue with updates 0.6.0 and 0.7.0. We are also planning to release 2-3 updates spanning from September 2025 - June 2026. The upcoming next update (v0.6.0 (Winter Drop) is planned to release end of November/start of December. More information will be posted as time goes by.',
+        image: "Assets/logo-1.png"
+    },
     {
         id: 7,
         show: true,
