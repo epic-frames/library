@@ -24,3 +24,14 @@ h1#title, .countdown-container {
     font-size: 1.5em;
     margin-top: 10px;
 }
+
+@media (max-width: 600px) {
+    .countdown-frame {
+        padding: 0px 10px 0px 10px;
+        margin: 4px;
+        font-size: 35px;
+    }
+    .countdown-label {
+        font-size: 1em
+    }
+}

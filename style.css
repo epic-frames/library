@@ -18,6 +18,10 @@ body {
     line-height: 1.5;
 }
 
+#websiteTitle {
+    margin-left: 10px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,6 +33,10 @@ header {
     background-color: var(--color-gray-800);
     padding: 1.5rem 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#countdownContainer {
+    margin-bottom: 20px;
 }
 
 .flex-between {

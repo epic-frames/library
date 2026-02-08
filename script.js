@@ -1,4 +1,7 @@
-const version = "webv1.0.9"
+const version = "webv1.0.901"
+const countdown = false
+const countdownDate = "February 28, 2026"
+const countdownExactTime = "16:00:00"
 
 const main_news = [
     {
@@ -80,7 +83,7 @@ const news = [
         id: 4,
         show: true,
         release: "20 March, 2025 16:00:00",
-        tags: "News",
+        tags: "New Update",
         title: 'New version for "Cave of Malice"',
         date: "20 March, 2025",
         content: 'A new versions has come with 2 new levels and a new cave creature',
@@ -262,13 +265,14 @@ const versions = {
     ]
 }
 
-function createCountdown(elementId, dates) {
-    function updateCountdown() {
+
+function updateCountdown(element, dates, container) {
         const now = new Date().getTime();
         const nextDate = dates.find(date => date > now);
 
         if (!nextDate) {
-            document.getElementById(elementId).innerHTML = "Update has dropped!";
+            container.innerHTML = ``
+            // element.innerHTML = "Update has dropped!";
             return;
         }
 
@@ -278,7 +282,7 @@ function createCountdown(elementId, dates) {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById(elementId).innerHTML = `
+        element.innerHTML = `
             <div><div class="countdown-frame">${formatTime(days)}</div><div class="countdown-label">Days</div></div>
             <span class="colon">:</span>
             <div><div class="countdown-frame">${formatTime(hours)}</div><div class="countdown-label">Hours</div></div>
@@ -289,7 +293,10 @@ function createCountdown(elementId, dates) {
         `;
     }
 
-    setInterval(updateCountdown, 1000);
+
+function createCountdown(element, dates, container) {
+    setInterval(updateCountdown, 1000, element, dates, container);
+    updateCountdown(element, dates, container)
 }
 
 function formatTime(time) {
@@ -441,4 +448,17 @@ function render(){
 }
 
 // Initial render
+if (countdown) {
+    const container = document.getElementById("countdownContainer")
+    container.innerHTML = `
+    <h1 id="title">Countdown till next update</h1>
+    <div id="countdown" class="countdown-container"></div>`
+    // console.log("Rendered!")
+    const countdownElement = document.getElementById("countdown")
+    const countdownTime = new Date(`${countdownDate}, ${countdownExactTime}`).getTime()
+    // console.log(container, countdownElement)
+    createCountdown(countdownElement, [countdownTime], container);
+    updateCountdown(countdownElement, [countdownTime], container);
+}
+
 renderFooter();
