@@ -1,6 +1,7 @@
 {
-    "latest_version": "v0.6.0",
-    "update_url": "https://epic-frames.github.io/library/cave_of_malice.html",
+    "version": "v0.6.0",
+    "macos": "https://epic-frames.github.io/library/releases/temp.zip",
+    "windows": "https://epic-frames.github.io/library/releases/temp.zip",
     "update_message": "New Update is out!",
-    "update_time": "Febuary 9, 2026 16:00:00"
+    "update_time": "February 9, 2026 16:00:00"
 }
