@@ -1,7 +1,7 @@
 {
     "version": "v0.6.0",
-    "macos": "https://epic-frames.github.io/library/releases/temp.zip",
-    "windows": "https://epic-frames.github.io/library/releases/temp.zip",
+    "macos": "https://epic-frames.github.io/library/releases/game-macos.zip",
+    "windows": "https://epic-frames.github.io/library/releases/game-windows.zip",
     "update_message": "New Update is out!",
     "update_time": "February 9, 2026 16:00:00"
 }
