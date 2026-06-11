@@ -1,6 +1,6 @@
 {
     "version": "v1.0.0",
-    "macos": "https://raw.githubusercontent.com/epic-frames/library/main/releases/cave_of_malice.zip",
+    "macos": "https://raw.githubusercontent.com/epic-frames/library/main/releases/cave_of_malice_v1.0.0.zip",
     "windows": "https://epic-frames.github.io/library/releases/game-windows.zip",
     "update_message": "New Update is out!",
     "update_time": "February 9, 2026 16:00:00"
