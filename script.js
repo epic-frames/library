@@ -1,4 +1,4 @@
-const version = "webv1.0.919"
+const version = "webv1.0.9.20"
 const countdown = false
 const countdownDate = "February 28, 2026"
 const countdownExactTime = "16:00:00"
