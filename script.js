@@ -1,40 +1,24 @@
-const version = "webv1.0.9.27"
-const countdown = false
-const countdownDate = "February 28, 2026"
+const version = "webv1.1.0"
+const countdown = true
+const countdownDate = new Date("2026-09-19T17:00:00+03:00").getTime();
 const countdownExactTime = "16:00:00"
 
 const main_news = [
     {
         id: 8,
-        release: "28 August, 2025 9:00:00",
+        release: "2025-08-28T09:00:00+03:00",
         title: 'New Year for Cave of Malice',
         date: "28 August, 2025",
         content: 'After a long summer break, "Cave Of Malice" is back in development but some things have changed for "Cave Of Malice" during the summer. Cave Of Malice will not be releasing a global version of the game (v1.0.0) this year (2025) but will continue with updates 0.6.0 and 0.7.0. We are also planning to release 2-3 updates spanning from September 2025 - June 2026. The upcoming next update (v0.6.0 (Winter Drop) is planned to release end of November/start of December. More information will be posted as time goes by.',
-        image: "Assets/logo-1.png"
+        image: "assets/logo-1.png"
     },
     {
         id: 7,
-        release: "8 May, 2025 16:00:00",
+        release: "2025-05-08T16:00:00+03:00",
         title: 'Upcoming Update Detailed Brakedown',
         date: "8 May, 2025",
         content: 'This is the deatiled bakedown of the update coming this friday with deatiled explanations for each of the features added. The article is accessible <a style="color: gray;" href="https://drive.google.com/file/d/1DM0ftl7v5doEDUSu36giyuZLDLcQtYTK/view?usp=sharing">here</a>.',
-        image: "Assets/health_sneak_peak.png"
-    },
-    {
-        id: 3,
-        release: "10 March, 2025 19:12:30",
-        title: 'Open Beta-testing for "Cave Of Mailce"',
-        date: "20 February, 2025",
-        content: '"Cave of Malice" is now available for worldwide beta testing on our website. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
-        image: "Assets/COM.png"
-    },
-    {
-        id: 1,
-        release: "1 January, 2025 00:00:00",
-        title: 'Development of "Asteroid Avoider 3000"',
-        date: "17 January, 2025",
-        content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
-        image: "Assets/photo-1.png"
+        image: "assets/health_sneak_peak.png"
     }
 ];
 
@@ -42,82 +26,82 @@ const news = [
     {
         id: 8,
         show: true,
-        release: "28 August, 2025 9:00:00",
+        release: "2025-08-28T09:00:00+03:00",
         tags: "News",
         title: 'New Year for Cave of Malice',
         date: "28 August, 2025",
         content: 'After a long summer break, "Cave Of Malice" is back in development but some things have changed for "Cave Of Malice" during the summer. Cave Of Malice will not be releasing a global version of the game (v1.0.0) this year (2025) but will continue with updates 0.6.0 and 0.7.0. We are also planning to release 2-3 updates spanning from September 2025 - June 2026. The upcoming next update (v0.6.0 (Winter Drop) is planned to release end of November/start of December. More information will be posted as time goes by.',
-        image: "Assets/logo-1.png"
+        image: "assets/logo-1.png"
     },
     {
         id: 7,
         show: true,
-        release: "8 May, 2025 16:00:00",
+        release: "2025-05-08T16:00:00+03:00",
         tags: "New Update Brakedown",
         title: 'Upcoming Update Detailed Brakedown',
         date: "8 May, 2025",
         content: 'This is the deatiled bakedown of the update coming this friday with deatiled explanations for each of the features added. The article is accessible <a style="color: gray;" href="https://drive.google.com/file/d/1DM0ftl7v5doEDUSu36giyuZLDLcQtYTK/view?usp=sharing">here</a>.',
-        image: "Assets/health_sneak_peak.png"
+        image: "assets/health_sneak_peak.png"
     },
     {
         id: 6,
         show: true,
-        release: "11 April, 2025 16:00:00",
+        release: "2025-04-11T16:00:00+03:00",
         tags: "New Update",
         title: 'New Version of "Cave of Malice" (still in beta-development)',
         date: "11 April, 2025",
         content: 'A new version of "Cave of Malice" has just dropped with coins and a shop. Check out the game versions for more detail',
-        image: "Assets/COM.png"
+        image: "assets/COM.png"
     },
     {
         id: 5,
         show: true,
-        release: "21 March, 2025 10:00:00",
+        release: "2025-03-21T10:00:00+03:00",
         tags: "Emergency Update",
         title: 'Emergency update for "Cave of Malice"',
         date: "21 March, 2025",
         content: 'Because of some errors on our side we will be releasing a new patch update for the recent update: v0.2.1. We will also be adding a new freeze bg as a thank you for you waiting.',
-        image: "Assets/freeze_bg.png"
+        image: "assets/freeze_bg.png"
     },
     {
         id: 4,
         show: true,
-        release: "20 March, 2025 16:00:00",
+        release: "2025-03-20T16:00:00+03:00",
         tags: "New Update",
         title: 'New version for "Cave of Malice"',
         date: "20 March, 2025",
         content: 'A new versions has come with 2 new levels and a new cave creature',
-        image: "Assets/COM.png"
+        image: "assets/COM.png"
     },
     {
         id: 3,
         show: true,
-        release: "1 January, 2025 00:00:00",
+        release: "2025-01-01T00:00:00+03:00",
         tags: "News",
         title: 'Open Beta-testing for "Cave Of Mailce"',
         date: "20 February, 2025",
         content: '"Cave of Malice" is now available for worldwide beta testing on our website until version 1.0.0 is released. Please be aware that this is a beta version and may contain some bugs. If you come across any issues, please report them to epicframe.email@gmail.com.',
-        image: "Assets/COM.png"
+        image: "assets/COM.png"
     },
     {
         id: 2,
         show: true,
-        release: "1 January, 2025 00:00:00",
+        release: "2025-01-01T00:00:00+03:00",
         tags: "News",
         title: "New Game Release",
         date: "15 February, 2025",
         content: 'Epic Frame Studios is happy to announce that we are starting the development of a brand new game called "Cave of Malice". This game is a platformer game where you have to jump on platforms to get through and move on to the next level. We will update you as time goes by. Note: The photo above is only our inspiration.',
-        image: "Assets/photo-2.jpg"
+        image: "assets/photo-2.jpg"
     },
     {
         id: 1,
         show: true,
-        release: "1 January, 2025 00:00:00",
+        release: "2025-01-01T00:00:00+03:00",
         tags: "News",
         title: 'Development of "Asteroid Avoider 3000"',
         date: "17 January, 2025",
         content: "With the latest update (v1.3), we are stopping further development of this game, but something interesting is coming soon.",
-        image: "Assets/photo-1.png"
+        image: "assets/photo-1.png"
     }
 ];
 
@@ -126,26 +110,39 @@ const sp = [
     {
         id: 1,
         show: false,
-        release: "8 April, 2025 17:00:00",
+        release: "2025-04-08T17:00:00+03:00",
         content: `
         <div class="sp-content">
             <h3 class="text-xl font-semibold">Something big is coming!</h3>
             <p class="sp-date">8 April, 2025</p>
             <p class="sp-text">A ability will be added in the next update that might change your entire playstyle!</p>
-            <img src="Assets/sneak_peak.png" alt="A new creature!" class="sp-image">
+            <img src="assets/sneak_peak.png" alt="A new creature!" class="sp-image">
         </div>
         `
     },
     {
         id: 2,
         show: false,
-        release: "7 May, 2025 17:00:00",
+        release: "2025-05-07T17:00:00+03:00",
         content: `
         <div class="sp-content">
             <h3 class="text-xl font-semibold">The second update for the shop is here this Friday!</h3>
             <p class="sp-date">7 May, 2025</p>
             <p class="sp-text">In this update we redesigned the shop to help improve the playing experience</p>
-            <img src="Assets/health_sneak_peak.png" alt="New Health System" class="sp-image">
+            <img src="assets/health_sneak_peak.png" alt="New Health System" class="sp-image">
+        </div>
+        `
+    },
+    {
+        id: 2,
+        show: true,
+        release: "2026-02-14T16:00:00+03:00",
+        content: `
+        <div class="sp-content">
+            <h3 class="text-xl font-semibold">A new character is coming in this new update!</h3>
+            <p class="sp-date">15 February, 2026</p>
+            <p class="sp-text">In this update we added a new skin you will be able to use in-game!</p>
+            <img src="assets/sneak-peak-silhuette-2.png" alt="New character is coming!" class="sp-image">
         </div>
         `
     }
@@ -158,8 +155,9 @@ const games = [
         title: "Cave of Malice",
         dtitle: "cave_of_malice",
         description: "A platformer set in a cave with cave creatures.",
-        image: "Assets/COM-N.png",
+        image: "assets/COM-N.png",
         versions: [
+            // { version: "v1.0.0", date: "19 September, 2026", notes: "Official Beta launch. Added 5 new levels, a new enemy, and the speedrunning mode"},
             { version: "v0.4.0", date: "9 May, 2025", notes: "Completed the shop with a new wheel to spin and more upgrades"},
             { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
             { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
@@ -171,7 +169,7 @@ const games = [
         title: "Asteroid Avoider 3000",
         dtitle: "asteroid_avoider",
         description: "A game where you have to avoid asteroids.",
-        image: "Assets/AA3000.png",
+        image: "assets/AA3000.png",
         versions: [
             { version: "v1.3.0", date: "17 January, 2025", notes: "Added a new settings page"},
             { version: "v1.2.0", date: "9 January, 2025", notes: "New sprite and music"}
@@ -180,7 +178,7 @@ const games = [
 ];
 
 const versions = {
-    "Asteroid_Avoider_3000": [
+    "asteroid_avoider_3000": [
         {
             id: 4,
             name: "1.3.0",
@@ -226,7 +224,19 @@ const versions = {
             size: "98KB"
         }
     ],
-    "Cave_Of_Malice": [
+    "cave_of_malice": [
+        // {
+        //     id: 6,
+        //     launcher: true,
+        //     name: "Cave Of Malice Launcher",
+        //     description: "The 2026 Beta-release Fall Drop comes with changes to the games shop by introducing the new dash ability, customizable skins unlockable through custom codes, 5 new levels, and the speedrunning mode that allows you to compete with friends for the best times! The 10 best players will be displayed on the website's leaderboard.",
+        //     date: "19 September, 2026",
+        //     size: "MacOS: 148.1MB, Windows: 17MB",
+        //     button_1: "MacOS",
+        //     extention_1: ".dmg",
+        //     button_2: "Windows",
+        //     extention_2: ".zip"
+        // },
         {
             id: 5,
             name: "0.4.0",
@@ -264,6 +274,69 @@ const versions = {
         }
     ]
 }
+
+const videos = [
+    {
+        id: 1,
+        title: "Cave Of Malice 1.0.0 Update Video",
+        date: "19 September, 2026",
+        type: "youtube",
+        src: "https://www.youtube.com/watch?v=7WRdhTjdGJs"
+    }
+];
+
+function renderVideos() {
+    try {
+        const videoContainer = document.getElementById("videoContainer");
+
+        videoContainer.innerHTML = videos.map(video => {
+
+            let player;
+
+            if (video.type === "youtube") {
+
+                const videoId = new URL(video.src).searchParams.get("v");
+
+                player = `
+                    <iframe
+                        src="https://www.youtube.com/embed/${videoId}"
+                        title="${video.title}"
+                        allowfullscreen>
+                    </iframe>
+                `;
+
+            } else if (video.type === "local") {
+
+                player = `
+                    <video controls>
+                        <source src="${video.src}" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                `;
+
+            }
+
+            return `
+                <div class="video-card">
+
+                    <div class="video-player">
+                        ${player}
+                    </div>
+
+                    <div class="video-content">
+                        <h3>${video.title}</h3>
+                        <p class="video-date">${video.date}</p>
+                    </div>
+
+                </div>
+            `;
+
+        }).join("");
+
+    } catch (TypeError) {}
+}
+
+
 
 
 function updateCountdown(element, dates, container) {
@@ -307,6 +380,7 @@ function formatTime(time) {
 function renderMainNews() {
     try {
         const newsContainer = document.getElementById('newsContainer');
+        new Date().getUTCDate()
         newsContainer.innerHTML = main_news.filter(item => new Date(item.release).getTime() <= new Date().getTime()).map(item => `
             <div class="news-card">
                 <img src="${item.image}" alt="${item.title}" class="news-image">
@@ -350,7 +424,7 @@ function renderSneakPeeks() {
             `
         const spContainer = document.getElementById('sneakPeekContainer');
         spContainer.innerHTML = sp.filter(sp => sp.show === true && new Date(sp.release).getTime() <= new Date().getTime()).map(sp => `
-            <div class="news-card">
+            <div class="sp-card">
                 ${sp.content}
             </div>
         `).join('')
@@ -407,15 +481,26 @@ function renderVersions(gameName) {
 
     versionsContainer.innerHTML = versions[gameName].map(version => `
         <div class="version-card">
-            <h3>Version ${version.name}</h3>
+            <h3>${version.launcher ? "" : "Version"} ${version.name}</h3>
             <p>${version.description}</p>
             <div class="version-info">
                 <p><strong>Release Date:</strong> ${version.date}</p>
                 <p><strong>Size:</strong> ${version.size}</p>
             </div>
-            <button class="download-btn" onclick="downloadVersion('${gameName}', '${version.name}')">
-                Download Version ${version.name}
-            </button>
+            ${version.launcher ? `
+                <div class="launcher-buttons">
+                    <button class="download-btn" onclick="downloadVersion('${gameName}', '${version.button_1}', ${version.launcher}, '${version.extention_1}')">
+                        Download ${version.button_1} Launcher
+                    </button>
+                    <button class="download-btn" onclick="downloadVersion('${gameName}', '${version.button_2}', ${version.launcher}, '${version.extention_2}')">
+                        Download ${version.button_2} Launcher
+                    </button>
+                </div>
+            ` : `
+                <button class="download-btn" onclick="downloadVersion('${gameName}', '${version.name}', false)">
+                    Download Version ${version.name}
+                </button>
+            `}
         </div>
     `).join('');
 }
@@ -429,14 +514,18 @@ function renderFooter() {
 }
 
 
-function downloadVersion(game, version) {
-    a = `Versions/${game}/${game}_v${version}.zip`
+function downloadVersion(game, version, launcher, extention) {
+    a = `versions/${game}/${game}_v${version}.zip`
+    if (launcher) {
+        a = `launchers/${version.toLowerCase()}/${game}_${version.toLowerCase()}${extention}`
+        console.log(a)
+    };
     window.location.href = a
     alert(`Downloading version ${version}...`);
 }
 
 function render(){
-    if (sp.length > 0 & sp.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
+    if (sp.length > 0 && sp.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
         renderSneakPeeks();
     }
     // if (news.length > 0 & news.some(item => item.show && new Date(item.release).getTime() <= new Date().getTime())) {
@@ -447,6 +536,50 @@ function render(){
     // }
 }
 
+function updateLeaderboard(database_url){
+    fetch(database_url)
+    .then(response => response.json())
+    .then(data => {
+        const scores = Object.values(data);
+        scores.sort((a,b) => a.time - b.time);
+        console.log(scores)
+        if (scores.length > 0){
+            document.getElementById("lb_table").innerHTML = `
+                <tr>
+                    <td>Place</td>
+                    <td>Name</td>
+                    <td>Date</td>
+                    <td>Time</td>
+                </tr>
+                `
+            for (let i = 0; i < 10; i++) {
+                let entry = scores[i];
+                if (entry) {
+                    if (entry.name.length > 25) {
+                        entry.name = entry.name.slice(0, 25) + "..."
+                        // entry.name = ""
+                    }
+                    document.getElementById("lb_table").innerHTML += `<tr>
+                    <td>${i+1}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.date}</td>
+                    <td>${entry.time}</td></tr>
+                    `;
+                } else {
+                    document.getElementById("lb_table").innerHTML += `
+                    <tr>
+                    <td>${i+1}</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    </tr>
+                    `;
+                }
+            }
+        }
+    })
+}
+
 // Initial render
 if (countdown) {
     const container = document.getElementById("countdownContainer")
@@ -455,10 +588,10 @@ if (countdown) {
     <div id="countdown" class="countdown-container"></div>`
     // console.log("Rendered!")
     const countdownElement = document.getElementById("countdown")
-    const countdownTime = new Date(`${countdownDate}, ${countdownExactTime}`).getTime()
+    // const countdownTime = new Date(`${countdownDate}, ${countdownExactTime}`).getTime()
     // console.log(container, countdownElement)
-    createCountdown(countdownElement, [countdownTime], container);
-    updateCountdown(countdownElement, [countdownTime], container);
+    createCountdown(countdownElement, [countdownDate], container);
+    updateCountdown(countdownElement, [countdownDate], container);
 }
 
 renderFooter();

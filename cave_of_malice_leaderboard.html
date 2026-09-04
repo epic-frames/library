@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Frame Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="countdown.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container flex-between">
+            <div class="logo-container">
+                <img src="assets/logo-1.png" alt="Logo" height="100px" width="auto">
+                <h1 id="websiteTitle">Epic Frame Studio</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="index.html#gamesSection">Games</a></li>
+                    <!-- <li><a href="videos.html">Videos</a></li> -->
+                    <!-- <li><a href="cave_of_malice_leaderboard.html">Leaderboard</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 id="section-header"><span id="live-emoji" class="blink">🔴</span>&nbsp; Live Cave of Malice Leaderboard</h1><br>
+            <table id="lb_table">
+                <tr>
+                    <td>Place</td>
+                    <td>Name</td>
+                    <td>Date</td>
+                    <td>Time</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>Epic Frame Studio - Bringing Games from Frames to Life</p>
+            </div>
+            <div class="mail">
+                To contact us: <i id="mail-adress">epicframe.email@gmail.com</i>
+            </div>
+        </div>
+        <div id="footer" class="footer-bottom">
+            
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function(){
+            const database_url = "https://cave-of-malice-leaderboard-default-rtdb.europe-west1.firebasedatabase.app/scores.json"
+            updateLeaderboard(database_url)
+            setInterval(() => updateLeaderboard(database_url), 5000)
+            setInterval(render, 1000)
+        }
+        
+
+    </script>
+</body>
+</html>

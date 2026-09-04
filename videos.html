@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Frame Studio - Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container flex-between">
+            <div class="logo-container">
+                <img src="assets/logo-1.png" alt="Logo" height="100px" width="auto">
+                <h1 id="websiteTitle">Epic Frame Studio</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="index.html#gamesSection">Games</a></li>
+                    <!-- <li><a href="videos.html">Videos</a></li> -->
+                    <!-- <li><a href="cave_of_malice_leaderboard.html">Leaderboard</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section class="section" id="videosSection">
+                <h2 class="section-header">
+                    <span class="icon">🎬</span> Videos
+                </h2>
+
+                <div id="videoContainer" class="video-grid"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>Epic Frame Studio - Bringing Games from Frames to Life</p>
+            </div>
+
+            <div class="mail">
+                To contact us: <i id="mail-adress">epicframe.email@gmail.com</i>
+            </div>
+        </div>
+
+        <div id="footer" class="footer-bottom"></div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        renderVideos();
+    </script>
+
+</body>
+</html>

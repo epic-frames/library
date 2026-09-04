@@ -185,7 +185,13 @@
             cursor: pointer;
             transition: background-color 0.3s;
             align-self: flex-start;
-            min-width: 200px;
+            /* min-width: 200px; */
+        }
+
+        .launcher-buttons {
+            display: flex;
+            gap: 1rem;
+            /* flex-wrap: wrap; */
         }
 
         .download-btn:hover {
@@ -254,7 +260,7 @@
     <header>
         <div id="header-id" class="container flex-between">
             <div class="logo-container">
-                <img src="Assets/logo-1.png" alt="Logo" height="100px" width="auto">
+                <img src="assets/logo-1.png" alt="Logo" height="100px" width="auto">
                 <h1>Epic Frame Studio</h1>
             </div>
             <nav>
@@ -262,6 +268,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="index.html#gamesSection">Games</a></li>
+                    <!-- <li><a href="videos.html">Videos</a></li> -->
+                    <!-- <li><a href="cave_of_malice_leaderboard.html">Leaderboard</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -270,14 +278,14 @@
     <main>
         <div class="container">
             <div class="game-info">
-                <img src="Assets/COM-N.png" alt="Cave Of Malice">
+                <img src="assets/COM-N.png" alt="Cave Of Malice">
                 <h1>Cave Of Malice</h1>
                 <p>A platformer set in a cave with cave creatures.</p>
                 <div class="game-stats">
-                    <p><strong>Last Updated:</strong> 9 May, 2025</p>
+                    <p><strong>Last Updated:</strong> 19 September, 2026</p>
                     <p><strong>Creation Date:</strong> 20 February, 2025</p>
                     <p><strong>Developer:</strong> Epic Frame Studio</p>
-                    <p><strong>Platform:</strong> PC &#40;Anything that supports Python&#41;</p>
+                    <p><strong>Platform:</strong> MacOS, Windows</p>
                 </div>
             </div>
 
@@ -302,7 +310,7 @@
     </footer>
     <script src="script.js"></script>
     <script>
-        renderVersions("Cave_Of_Malice");
+        renderVersions("cave_of_malice");
     </script>
 </body>
 
