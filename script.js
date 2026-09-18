@@ -1,7 +1,7 @@
-const version = "webv1.1.0.10"
+const version = "webv1.1.0.11"
 const countdown = true
-const countdownDate = new Date("2026-09-19T17:00:00+03:00").getTime();
-const countdownExactTime = "16:00:00"
+const countdownDate = new Date("2026-09-19T12:15:00+03:00").getTime();
+// const countdownExactTime = "16:00:00"
 
 const main_news = [
     {
@@ -157,7 +157,7 @@ const games = [
         description: "A platformer set in a cave with cave creatures.",
         image: "assets/COM-N.png",
         versions: [
-            // { version: "v1.0.0", date: "19 September, 2026", notes: "Official Beta launch. Added 5 new levels, a new enemy, and the speedrunning mode"},
+            { version: "v1.0.0", date: "19 September, 2026", notes: "Official Beta launch. Added 5 new levels, a new enemy, and the speedrunning mode"},
             { version: "v0.4.0", date: "9 May, 2025", notes: "Completed the shop with a new wheel to spin and more upgrades"},
             { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
             { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
@@ -225,18 +225,18 @@ const versions = {
         }
     ],
     "cave_of_malice": [
-        // {
-        //     id: 6,
-        //     launcher: true,
-        //     name: "Cave Of Malice Launcher",
-        //     description: "The 2026 Beta-release Fall Drop comes with changes to the games shop by introducing the new dash ability, customizable skins unlockable through custom codes, 5 new levels, and the speedrunning mode that allows you to compete with friends for the best times! The 10 best players will be displayed on the website's leaderboard.",
-        //     date: "19 September, 2026",
-        //     size: "MacOS: 148.1MB, Windows: 17MB",
-        //     button_1: "MacOS",
-        //     extention_1: ".dmg",
-        //     button_2: "Windows",
-        //     extention_2: ".zip"
-        // },
+        {
+            id: 6,
+            launcher: true,
+            name: "Cave Of Malice Launcher",
+            description: "The 2026 Beta-release Fall Drop comes with changes to the games shop by introducing the new dash ability, customizable skins unlockable through custom codes, 5 new levels, and the speedrunning mode that allows you to compete with friends for the best times! The 10 best players will be displayed on the website's leaderboard.",
+            date: "19 September, 2026",
+            size: "MacOS: 148.1MB, Windows: 17MB",
+            button_1: "MacOS",
+            extention_1: ".dmg",
+            button_2: "Windows",
+            extention_2: ".zip"
+        },
         {
             id: 5,
             name: "0.4.0",
