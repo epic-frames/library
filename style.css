@@ -143,6 +143,10 @@ main {
     margin-bottom: 1rem;
 }
 
+.changelog-content {
+    white-space: pre-line;
+}
+
 .sp-text {
     margin-bottom: 1rem;;
 }

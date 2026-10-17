@@ -1,9 +1,26 @@
-const version = "webv1.1.0.16"
+const version = "webv1.1.1"
 const countdown = false
 const countdownDate = new Date("2026-09-19T12:15:00+03:00").getTime();
 // const countdownExactTime = "16:00:00"
 
+const change_log = [
+    {
+        id: 1,
+        title: "Webv1.1.1",
+        date: "17 October, 2026",
+        content: "- Added changelog \n - Added legacy v1.0 of COM"
+    }
+]
+
 const main_news = [
+    {
+        id: 9,
+        release: "2026-10-17T13:00:00+03:00",
+        title: 'New Year for Cave of Malice',
+        date: "17 October, 2026",
+        content: 'After more than a year, "Cave Of Malice" is back with the biggest update yet. The update introducing v1.0.0 was held on the 19th of September, 2026, faturing a close-up look on the update that makes the game more accessible and multipurposefull with the introduction of speedrunning. The best times are visible on the "Leaderboard" page.',
+        image: "assets/COM-live-v1.0.0.png"
+    },
     {
         id: 8,
         release: "2025-08-28T09:00:00+03:00",
@@ -23,6 +40,16 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 9,
+        show: true,
+        release: "2026-10-17T13:00:00+03:00",
+        tags: "News, New Update",
+        title: 'New Year for Cave of Malice',
+        date: "17 October, 2026",
+        content: 'After more than a year, "Cave Of Malice" is back with the biggest update yet. The update introducing v1.0.0 was held on the 19th of September, 2026, faturing a close-up look on the update that makes the game more accessible and multipurposefull with the introduction of speedrunning. The best times are visible on the "Leaderboard" page.',
+        image: "assets/COM-live-v1.0.0.png"
+    },
     {
         id: 8,
         show: true,
@@ -226,16 +253,23 @@ const versions = {
     ],
     "cave_of_malice": [
         {
-            id: 6,
+            id: 7,
             launcher: true,
             name: "Cave Of Malice Launcher",
-            description: "The 2026 Beta-release Fall Drop comes with changes to the games shop by introducing the new dash ability, customizable skins unlockable through custom codes, 5 new levels, and the speedrunning mode that allows you to compete with friends for the best times! The 10 best players will be displayed on the website's leaderboard.",
+            description: "Launcher that automatically updates the game to the newest version and runs it.",
             date: "19 September, 2026",
             size: "MacOS: 148.1MB, Windows: 17MB",
             button_1: "MacOS",
             extention_1: ".dmg",
             button_2: "Windows",
             extention_2: ".zip"
+        },
+        {
+            id: 6,
+            name: "1.0.0",
+            description: "The 2026 Beta-release Fall Drop comes with changes to the games shop by introducing the new dash ability, customizable skins unlockable through custom codes, 5 new levels, and the speedrunning mode that allows you to compete with friends for the best times! The 10 best players will be displayed on the website's leaderboard.",
+            date: "19 September, 2026",
+            size: "13MB"
         },
         {
             id: 5,
@@ -392,6 +426,23 @@ function renderMainNews() {
             </div>
         `).join('');
     } catch (TypeError) {}
+}
+
+function renderChangelog() {
+    const changelogContainer = document.getElementById('changelogContainer');
+    if (!changelogContainer) return;
+
+    changelogContainer.innerHTML = change_log.map(item => `
+        <div class="news-card">
+            <div class="news-content">
+                <div class="version-header">
+                    <h3 class="text-xl font-semibold">${item.title}</h3>
+                    <span class="news-date">${item.date}</span>
+                </div>
+                <p class="changelog-content">${item.content}</p>
+            </div>
+        </div>
+    `).join('');
 }
 
 
