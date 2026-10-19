@@ -1,4 +1,4 @@
-const version = "webv1.1.1.1"
+const version = "webv1.1.1.2"
 const countdown = false
 const countdownDate = new Date("2026-09-19T12:15:00+03:00").getTime();
 // const countdownExactTime = "16:00:00"
