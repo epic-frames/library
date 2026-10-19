@@ -1,4 +1,4 @@
-const version = "webv1.1.1"
+const version = "webv1.1.1.1"
 const countdown = false
 const countdownDate = new Date("2026-09-19T12:15:00+03:00").getTime();
 // const countdownExactTime = "16:00:00"
@@ -9,6 +9,12 @@ const change_log = [
         title: "Webv1.1.1",
         date: "17 October, 2026",
         content: "- Added changelog \n - Added legacy v1.0 of COM"
+    },
+    {
+        id: 2,
+        title: "Webv1.1.1.1",
+        date: "19 October, 2026",
+        content: "- New Halloween Themed Seasonal Version \n - Added legacy v1.0.1 of COM"
     }
 ]
 
