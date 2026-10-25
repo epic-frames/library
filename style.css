@@ -168,7 +168,7 @@ header nav {
 
     .nav-links {
         display: flex;
-        gap: 1.25rem;
+        gap: 1.5rem;
     }
 
     .nav-links a {
