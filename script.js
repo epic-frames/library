@@ -1,4 +1,4 @@
-const version = "webv1.1.1.2"
+const version = "webv1.2"
 const countdown = false
 const countdownDate = new Date("2026-09-19T12:15:00+03:00").getTime();
 // const countdownExactTime = "16:00:00"
@@ -12,13 +12,21 @@ const change_log = [
     },
     {
         id: 2,
-        title: "Webv1.1.1.1",
+        title: "Webv1.2",
         date: "19 October, 2026",
-        content: "- New Halloween Themed Seasonal Version \n - Added legacy v1.0.1 of COM"
+        content: "- New Halloween Themed Seasonal Version \n - Added legacy v1.0.1 of COM \n - Revamped the interface for mobile users (Maximized space, added menu icon, easier site navigation)"
     }
 ]
 
 const main_news = [
+    {
+        id: 10,
+        release: "2026-10-25T18:00:00+03:00",
+        title: 'Halloween Event within Cave Of Malice',
+        date: "25 October, 2026",
+        content: 'As a temporary theme, we are releasing the Halloween Theme that only affects the main menu screen. The buttons also gain a new look, although the functionality remains the same.',
+        image: "assets/halloween-bg.png"
+    },
     {
         id: 9,
         release: "2026-10-17T13:00:00+03:00",
@@ -46,6 +54,16 @@ const main_news = [
 ];
 
 const news = [
+    {
+        id: 10,
+        show: true,
+        release: "2026-10-25T18:00:00+03:00",
+        tags: "New Update",
+        title: 'Halloween Event within Cave Of Malice',
+        date: "25 October, 2026",
+        content: 'As a temporary theme, we are releasing the Halloween Theme that only affects the main menu screen. The buttons also gain a new look, although the functionality remains the same.',
+        image: "assets/halloween-bg.png"
+    },
     {
         id: 9,
         show: true,
@@ -190,10 +208,11 @@ const games = [
         description: "A platformer set in a cave with cave creatures.",
         image: "assets/COM-N.png",
         versions: [
+            { version: "v1.0.1", date: "25 September, 2026", notes: "Temporary Halloween Theme"},
             { version: "v1.0.0", date: "19 September, 2026", notes: "Official Beta launch. Added 5 new levels, a new enemy, and the speedrunning mode"},
             { version: "v0.4.0", date: "9 May, 2025", notes: "Completed the shop with a new wheel to spin and more upgrades"},
-            { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
-            { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
+            // { version: "v0.3.0", date: "11 April, 2025", notes: "Added a new shop where you can buy upgrades with coins"},
+            // { version: "v0.2.1", date: "21 March, 2025", notes: "This is a emergency update with some new feature based on the version 0.2.0"},
             // { version: "v0.1.0", date: "20 February, 2025", notes: "Initial launch (open beta testing)"}
         ]
     },
@@ -269,6 +288,13 @@ const versions = {
             extention_1: ".dmg",
             button_2: "Windows",
             extention_2: ".zip"
+        },
+        {
+            id: 7,
+            name: "1.0.1",
+            description: "The new Halloween Theme with changes to the main menu screen.",
+            date: "25 September, 2026",
+            size: "31.8MB"
         },
         {
             id: 6,
@@ -650,5 +676,17 @@ if (countdown) {
     createCountdown(countdownElement, [countdownDate], container);
     updateCountdown(countdownElement, [countdownDate], container);
 }
+
+document.querySelectorAll('.menu-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const navigation = document.getElementById(button.getAttribute('aria-controls'));
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+        navigation.classList.toggle('is-open', !isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+        button.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+        button.textContent = isOpen ? '☰' : '×';
+    });
+});
 
 renderFooter();
